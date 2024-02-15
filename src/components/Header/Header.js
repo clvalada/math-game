@@ -1,8 +1,10 @@
-import './Header.js';
+import './Header.css';
 
 const Header = () => {
     return (  
-       <h1>Football Franchise</h1> 
+        <div className='header'>
+            <h1>Field Goal Kicker</h1> 
+        </div>
     );
 }
  
