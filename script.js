@@ -126,7 +126,7 @@ function handleQuizEnd() {
     } else {
         const initialsContainer = document.getElementById("initials-container");
         initialsContainer.style.display = "block";
-        const resultsContainer = document.getElementById("results-container");
+        const resultsContainer = document.getElementById("results");
         resultsContainer.style.display = "block";
     }
 }
