@@ -10,7 +10,7 @@ const questions = [
         correctAnswer: 1,
     },
     {
-        question: "Hockey games have three 20-minute periods. If a player has played 2 full periods, how many minutes has he or she played?",
+        question: "A Hockey game has three 20-minute periods. If a player has played 2 full periods, how many minutes has he or she played?",
         choices: ["40 minutes","22 minutes","20 minutes","100 minutes"],
         correctAnswer: 2,
     },

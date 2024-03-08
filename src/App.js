@@ -8,9 +8,7 @@ function App() {
   return (
     <div className="app">
       <Header />
-        <div className="gameplay">
-          <Simple />
-        </div>
+      <Simple />
       <Footer />
     </div>
   );
