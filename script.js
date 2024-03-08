@@ -59,8 +59,13 @@ let wrongAnswers = 0;
 function startQuiz() {
     const startButton = document.getElementById("start-button");
     startButton.style.display = "none";
+
+    const mainContainer = document.querySelector(".main");
+    mainContainer.style.display = "none"; // Hide the initial content
+
     const quizContainer = document.getElementById("quiz");
-    quizContainer.style.display = "block";
+    quizContainer.style.display = "block"; // Display the quiz content
+
     displayQuestion();
 }
     
@@ -115,7 +120,7 @@ function checkAnswer(answerIndex) {
     }
 }
 
-// End of Quiz. Display results. Ask for intials
+// End of Quiz. Display results. Ask for initials
 function handleQuizEnd() {
     quizEnded = true;
 
@@ -129,6 +134,7 @@ function displayResults() {
     // Hide the question and choices containers
     questionContainer.style.display = "none";
     choicesContainer.style.display = "none";
+    quizContainer.style.display = "none";
 
     // Show the initials input field and save button
     const initialsContainer = document.getElementById("initials-container");
