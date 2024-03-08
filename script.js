@@ -61,6 +61,10 @@ let wrongAnswers = 0;
 function startQuiz() {
     const startButton = document.getElementById("start-button");
     startButton.style.display = "none";
+
+    const quizContainer = document.getElementById("quiz");
+    quizContainer.style.display = "block";
+
     startTimer();
     displayQuestion();
 }
