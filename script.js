@@ -53,42 +53,15 @@ const resultsContainer = document.getElementById("results");
 let currentQuestion = 0;
 let score = 0;
 let quizEnded = false;
-let timerInterval; 
-let timeLeft = 60; 
 let wrongAnswers = 0;
 
 // Start of quiz. Replaces the Start button with the timer and first question
 function startQuiz() {
     const startButton = document.getElementById("start-button");
     startButton.style.display = "none";
-
     const quizContainer = document.getElementById("quiz");
     quizContainer.style.display = "block";
-
-    startTimer();
     displayQuestion();
-}
-
-// Starts the timer and shows the timer
-function startTimer() {
-    const timerContainer = document.getElementById("timer-container");
-    timerContainer.style.display = "block";
-    timerInterval = setInterval(() => {
-        if (currentQuestion < questions.length) {
-            timeLeft--;
-            if (timeLeft < 0) {
-                timeLeft = 0;
-            }
-            const timerDisplay = document.getElementById("timer");
-            timerDisplay.textContent = `Time Remaining: ${timeLeft} seconds`;
-            if (timeLeft === 0) {
-                clearInterval(timerInterval); 
-                handleQuizEnd();
-            }
-        } else {
-            clearInterval(timerInterval);
-        }
-    }, 1000);
 }
     
 
@@ -124,17 +97,13 @@ function displayQuestion() {
     });
 }
 
-//Checks the answers as long as time is remaining
+//Checks the answers
 function checkAnswer(answerIndex) {
-    if (timeLeft <= 0) {
-        return;
-    }
     const currentQuestionObj = questions[currentQuestion];
     if (answerIndex === currentQuestionObj.correctAnswer) {
         score++; 
     } else {
         wrongAnswers++;
-        timeLeft -= 10;
     }
 
     // Move to the next question or finish the quiz
@@ -146,18 +115,14 @@ function checkAnswer(answerIndex) {
     }
 }
 
-// End of Quiz. Stop timer. Alert if time expired. Display results. Ask for intials
+// End of Quiz. Display results. Ask for intials
 function handleQuizEnd() {
     quizEnded = true;
-    clearInterval(timerInterval);
-    if (timeLeft <= 0) {
-        alert("Time's up! Your quiz has ended.");
-    } else {
-        const initialsContainer = document.getElementById("initials-container");
-        initialsContainer.style.display = "block";
-        const resultsContainer = document.getElementById("results");
-        resultsContainer.style.display = "block";
-    }
+
+    const initialsContainer = document.getElementById("initials-container");
+    initialsContainer.style.display = "block";
+    const resultsContainer = document.getElementById("results");
+    resultsContainer.style.display = "block";
 }
 
 function displayResults() {
