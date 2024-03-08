@@ -16,7 +16,7 @@ const questions = [
     {
         image: 'assets/images/runner.jpg',
         imageCredit: 'Image by <a href="https://pixabay.com/users/roxanawilliams1920-20506016/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=6252827">roxanawilliams1920</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=6252827">Pixabay</a>',
-        question: "If Sara can run 1 mile in 10 minutes. How long would it take her to run 3 miles?",
+        question: "If Sara can run 1 mile in 10 minutes. Assuming she keeps the same speed, how long would it take her to run 3 miles?",
         choices: ["13 minutes", "33 minutes", "30 minutes", "300 minutes"],
         correctAnswer: 2,
     },

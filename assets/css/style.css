@@ -9,6 +9,8 @@
 
 h1 {
     font-size: 36px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 button {
@@ -19,11 +21,13 @@ button {
 
 #main {
     flex: 0 0 100%;
-    max-width: ;width: 40%;
+    max-width: 40%;
     align-self: center;
     display: flex;
     flex-direction: column;
     padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 #quiz {
@@ -53,6 +57,23 @@ button {
     color: #666;
     margin-bottom: 20px;
 }
+
+#initials-container {
+    display: none;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#initials-container img {
+    max-width: 100%;
+    height: auto; 
+}
+
 .start-button {
     background-color: red;
     color: whitesmoke;
@@ -65,3 +86,5 @@ button {
     background-color: whitesmoke;
     color: red;
 }
+
+
