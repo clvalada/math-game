@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import Header from './components/Header/Header';
-import Fieldgoal from './components/Fieldgoal/Fieldgoal';
+import Simple from './components/Simple/Simple';
 import Footer from './components/Footer/Footer';
 
 function App() {
@@ -9,7 +9,7 @@ function App() {
     <div className="app">
       <Header />
         <div className="gameplay">
-          <Fieldgoal />
+          <Simple />
         </div>
       <Footer />
     </div>
