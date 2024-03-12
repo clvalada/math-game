@@ -55,7 +55,7 @@ let score = 0;
 let quizEnded = false;
 let wrongAnswers = 0;
 
-// Start of quiz. Replaces the Start button with the timer and first question
+// Start of quiz. Replaces the Start button with  first question
 function startQuiz() {
     const startButton = document.getElementById("start-button");
     startButton.style.display = "none";
